@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "VTT — زیرنویس آنلاین ویدیو (فارسی و انگلیسی)",
+    "description": "Extension name in Chrome Web Store"
+  },
+  "extShortName": {
+    "message": "VTT Subtitles",
+    "description": "Short name"
+  },
+  "extDescription": {
+    "message": "زیرنویس هوشمند و آنلاین برای یوتیوب و تمام ویدیوهای در حال پخش در کروم با پشتیبانی از زبان فارسی و انگلیسی.",
+    "description": "Extension description"
+  }
+}

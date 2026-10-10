@@ -1,0 +1,230 @@
+/* VTT — Minimal Popup UI by @momalekiii */
+:root {
+  --bg: #080a10;
+  --card: rgba(255, 255, 255, 0.045);
+  --border: rgba(255, 255, 255, 0.11);
+  --text: #f2f4fa;
+  --dim: rgba(242, 244, 250, 0.56);
+  --faint: rgba(242, 244, 250, 0.36);
+  --accent: #5eead4;
+  --accent-indigo: #6366f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Vazirmatn", "Tahoma", system-ui, -apple-system, sans-serif;
+  font-size: 12.5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.popup-wrap {
+  padding: 16px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dot.off {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: none;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.status-pill {
+  font-size: 10.5px;
+  color: var(--dim);
+}
+
+/* Minimal Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 21px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 3px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(135deg, var(--accent), var(--accent-indigo));
+}
+
+input:checked + .slider::before {
+  transform: translateX(17px);
+  background: #06070c;
+}
+
+/* Minimal Section Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--dim);
+}
+
+/* Segmented Pill Control */
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 3px;
+  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.segmented.two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.seg-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--dim);
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 6px 4px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.seg-btn:hover {
+  color: var(--text);
+}
+
+.seg-btn.active {
+  background: rgba(94, 234, 212, 0.16);
+  color: var(--accent);
+}
+
+/* Live Speech & Export Buttons */
+.actions-row {
+  display: flex;
+  gap: 6px;
+}
+
+.btn {
+  flex: 1;
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 7px 10px;
+  border-radius: 9px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  border-color: rgba(94, 234, 212, 0.45);
+  color: var(--accent);
+}
+
+.btn.live-active {
+  background: rgba(251, 113, 133, 0.16);
+  border-color: rgba(251, 113, 133, 0.5);
+  color: #fda4af;
+}
+
+/* Minimal Copyright Footer */
+.copyright {
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10.5px;
+  color: var(--faint);
+}
+
+.copyright a {
+  color: var(--dim);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.copyright a:hover {
+  color: var(--accent);
+}

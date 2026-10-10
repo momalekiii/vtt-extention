@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "VTT — Online Video Subtitles (Persian & English)",
+    "description": "Extension name in Chrome Web Store"
+  },
+  "extShortName": {
+    "message": "VTT Subtitles",
+    "description": "Short name"
+  },
+  "extDescription": {
+    "message": "Minimal online subtitle overlay for YouTube and any video playing in Chrome — built for Persian (FA) and English (EN).",
+    "description": "Extension description"
+  }
+}

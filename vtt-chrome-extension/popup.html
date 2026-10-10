@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VTT — Online Subtitles</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-wrap">
+    <!-- Minimal Header -->
+    <header class="header">
+      <div class="brand">
+        <span class="dot" id="statusDot"></span>
+        <div>
+          <div class="title">VTT Subtitles</div>
+          <div class="status-pill" id="statusText">Online · Persian &amp; English</div>
+        </div>
+      </div>
+      <label class="switch" title="Enable/Disable Online Subtitles">
+        <input type="checkbox" id="enableToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- Main Target Language (Persian / English / Both) -->
+    <section class="card">
+      <div class="row-label">
+        <span>Subtitle Language</span>
+        <span>زبان زیرنویس</span>
+      </div>
+      <div class="segmented" id="targetLangGroup">
+        <button type="button" class="seg-btn active" data-target="fa">فارسی (FA)</button>
+        <button type="button" class="seg-btn" data-target="en">English (EN)</button>
+        <button type="button" class="seg-btn" data-target="both">FA + EN</button>
+      </div>
+    </section>
+
+    <!-- Video Audio / Speech Source & Size -->
+    <section class="card">
+      <div class="row-label">
+        <span>Video Speech Source</span>
+        <span>زبان ویدیو</span>
+      </div>
+      <div class="segmented two-cols" id="sourceLangGroup">
+        <button type="button" class="seg-btn active" data-source="en-US">English Audio</button>
+        <button type="button" class="seg-btn" data-source="fa-IR">صدای فارسی</button>
+      </div>
+
+      <div class="row-label" style="margin-top:2px;">
+        <span>Subtitle Size</span>
+        <span>اندازه فونت</span>
+      </div>
+      <div class="segmented" id="fontSizeGroup">
+        <button type="button" class="seg-btn" data-size="sm">Small</button>
+        <button type="button" class="seg-btn active" data-size="md">Medium</button>
+        <button type="button" class="seg-btn" data-size="lg">Large</button>
+      </div>
+    </section>
+
+    <!-- Online Live Recognition & Export -->
+    <div class="actions-row">
+      <button type="button" class="btn" id="liveSpeechBtn" title="Live speech-to-subtitle for videos without captions">
+        🎤 <span id="liveSpeechLabel">Live Audio</span>
+      </button>
+      <button type="button" class="btn" id="exportVttBtn" title="Download captured subtitles as .vtt">
+        ⬇ .VTT
+      </button>
+      <button type="button" class="btn" id="exportSrtBtn" title="Download captured subtitles as .srt">
+        ⬇ .SRT
+      </button>
+    </div>
+
+    <!-- Minimal GitHub Copyright under Popup -->
+    <footer class="copyright">
+      <span>©</span>
+      <a href="https://github.com/momalekiii" target="_blank" rel="noopener noreferrer">@momalekiii</a>
+      <span>·</span>
+      <a href="https://github.com/momalekiii/VTT" target="_blank" rel="noopener noreferrer">VTT</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
