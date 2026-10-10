@@ -1,8 +1,7 @@
-VTT Chrome Extension ([`momalekiii/vtt-extention`](https://github.com/momalekiii/vtt-extention))
+VTT Chrome Extension 
 
 Minimal online subtitle overlay for **YouTube** and **any HTML5 video playing in Chrome**, built for **Persian (`فارسی`)** and **English (`EN`)**:
 
-- **Dedicated Repository**: **[github.com/momalekiii/vtt-extention](https://github.com/momalekiii/vtt-extention)**
 - **Works on YouTube & Any Online Video**: Automatically attaches to `<video>` elements in Chrome.
 - **Persian (`FA`), English (`EN`), & Bilingual (`FA + EN`)**: Instant language switching from the popup or the subtle top-right video corner chip.
 - **Calm, Sentence-Paced Reading**: Automatically merges rapid word-by-word auto-captions into full, readable 3.5s–5.5s sentence blocks.
